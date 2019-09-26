@@ -1,0 +1,206 @@
+cp -r <sourcedirectory> <targetdirectroy>
+cp <sourcefile> <targetfile>
+
+
+mv <sourcefile/directory> <targetfile/directory>
+
+[root@localhost ~]# ps -ef | grep 2745 | grep -v grep TomcaT
+grep: TomcaT: No such file or directory
+[root@localhost ~]# cd /opt/tomcat/
+[root@localhost tomcat]# ll
+total 171828
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+[root@localhost tomcat]# mkdir softwares
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:33 softwares
+[root@localhost tomcat]# cp apache-tomcat-8.5.8.zip softwares/^C
+[root@localhost tomcat]# cp /opt/tomcat/apache-tomcat-8.5.8.zip /opt/tomcat/softwares/
+[root@localhost tomcat]# ls -ltr softwares/
+total 9672
+-rw-r--r--. 1 root root 9900351 Nov 13 07:36 apache-tomcat-8.5.8.zip
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:36 softwares
+[root@localhost tomcat]# rm -f softwares/apache-tomcat-8.5.8.zip
+[root@localhost tomcat]# ls -ltr softwares/
+total 0
+[root@localhost tomcat]# cd softwares/
+[root@localhost softwares]# pwd
+/opt/tomcat/softwares
+[root@localhost softwares]# cp ../apache-tomcat-8.5.8.zip .
+[root@localhost softwares]# ls -ltr
+total 9672
+-rw-r--r--. 1 root root 9900351 Nov 13 07:39 apache-tomcat-8.5.8.zip
+[root@localhost softwares]# rm -f so
+[root@localhost softwares]# rm -f apache-tomcat-8.5.8.zip
+[root@localhost softwares]# cd ..
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:39 softwares
+[root@localhost tomcat]# cd -
+/opt/tomcat/softwares
+[root@localhost softwares]# pwd
+/opt/tomcat/softwares
+[root@localhost softwares]# ls -ltr
+total 0
+[root@localhost softwares]# cd
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# cp /opt/tomcat/apache-tomcat-8.5.8.zip /opt/tomcat/softwares/
+[root@localhost ~]# ls -ltr /opt/tomcat/softwares/
+total 9672
+-rw-r--r--. 1 root root 9900351 Nov 13 07:43 apache-tomcat-8.5.8.zip
+[root@localhost ~]# ls -ltr
+total 104
+-rw-r--r--. 1 root root 10033 Nov  8 13:28 install.log.syslog
+-rw-r--r--. 1 root root 51111 Nov  8 13:30 install.log
+-rw-------. 1 root root  1614 Nov  8 13:30 anaconda-ks.cfg
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Videos
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Templates
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Public
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Pictures
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Music
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Downloads
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Documents
+drwxr-xr-x. 2 root root  4096 Nov  8 13:44 Desktop
+[root@localhost ~]# cd /opt/tomcat/
+[root@localhost tomcat]# ll
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:43 softwares
+[root@localhost tomcat]# rm -f softwares/
+rm: cannot remove `softwares/': Is a directory
+[root@localhost tomcat]# rm -rf softwares/
+[root@localhost tomcat]# ls -ltr
+total 171828
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+[root@localhost tomcat]# cp apache-tomcat-8.5.8 tomcat1
+cp: omitting directory `apache-tomcat-8.5.8'
+[root@localhost tomcat]# cp -r apache-tomcat-8.5.8 tomcat1
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwx------. 9 root root      4096 Nov 13 07:49 tomcat1
+[root@localhost tomcat]# ls -tr tomcat1/
+logs  webapps  NOTICE  lib  conf  LICENSE  bin  temp  RUNNING.txt  RELEASE-NOTES  work
+[root@localhost tomcat]# ls -ltr tomcat1/
+total 120
+drwx------. 2 root root  4096 Nov 13 07:49 logs
+drwx------. 7 root root  4096 Nov 13 07:49 webapps
+-rwx------. 1 root root  1774 Nov 13 07:49 NOTICE
+drwx------. 2 root root  4096 Nov 13 07:49 lib
+drwx------. 3 root root  4096 Nov 13 07:49 conf
+-rwx------. 1 root root 58153 Nov 13 07:49 LICENSE
+drwx------. 2 root root  4096 Nov 13 07:49 bin
+drwx------. 2 root root  4096 Nov 13 07:49 temp
+-rwx------. 1 root root 16416 Nov 13 07:49 RUNNING.txt
+-rwx------. 1 root root  7240 Nov 13 07:49 RELEASE-NOTES
+drwx------. 3 root root  4096 Nov 13 07:49 work
+[root@localhost tomcat]#
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwx------. 9 root root      4096 Nov 13 07:49 tomcat1
+[root@localhost tomcat]# rm -rf tomcat1/^C
+[root@localhost tomcat]# rm -rf /opt/tomcat/tomcat1
+[root@localhost tomcat]# ls -ltr
+total 171828
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+[root@localhost tomcat]# mkdir softwares
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:53 softwares
+[root@localhost tomcat]# mv apache-tomcat-8.5.8 tomcat
+[root@localhost tomcat]# ls -ltr
+total 171832
+drwx------. 9 root root      4096 Nov  3 21:16 tomcat
+-rw-r--r--. 1 root root   9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+-rw-r--r--. 1 root root 166040563 Nov 12 15:56 jdk-8u111-linux-x64.rpm
+drwxr-xr-x. 2 root root      4096 Nov 13 07:53 softwares
+[root@localhost tomcat]# mv jdk-8u111-linux-x64.rpm softwares/
+[root@localhost tomcat]# ls -ltr
+total 9680
+drwx------. 9 root root    4096 Nov  3 21:16 tomcat
+-rw-r--r--. 1 root root 9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+drwxr-xr-x. 2 root root    4096 Nov 13 07:56 softwares
+[root@localhost tomcat]# ll
+total 9680
+-rw-r--r--. 1 root root 9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+drwxr-xr-x. 2 root root    4096 Nov 13 07:56 softwares
+drwx------. 9 root root    4096 Nov  3 21:16 tomcat
+[root@localhost tomcat]# mv tomcat apache-tomcat-8.5.8
+[root@localhost tomcat]# ls -ltr
+total 9680
+drwx------. 9 root root    4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root 9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+drwxr-xr-x. 2 root root    4096 Nov 13 07:56 softwares
+[root@localhost tomcat]#
+[root@localhost tomcat]# cd /opt/
+[root@localhost opt]# mkdir test^C
+[root@localhost opt]# cd -
+/opt/tomcat
+[root@localhost tomcat]# ls -ltr
+total 9680
+drwx------. 9 root root    4096 Nov  3 21:16 apache-tomcat-8.5.8
+-rw-r--r--. 1 root root 9900351 Nov 12 15:45 apache-tomcat-8.5.8.zip
+drwxr-xr-x. 2 root root    4096 Nov 13 07:56 softwares
+[root@localhost tomcat]# mkdir /opt/test/ram
+[root@localhost tomcat]# mkdir /opt/test2/ram
+mkdir: cannot create directory `/opt/test2/ram': No such file or directory
+[root@localhost tomcat]# mkdir -p /opt/test2/ram
+[root@localhost tomcat]# ls -ltr /opt/
+total 16
+drwxr-xr-x. 2 root root 4096 May 17  2013 rh
+drwxr-xr-x. 4 root root 4096 Nov 13 07:57 tomcat
+drwxr-xr-x. 3 root root 4096 Nov 13 07:59 test
+drwxr-xr-x. 3 root root 4096 Nov 13 08:00 test2
+[root@localhost tomcat]# ls -ltr /opt/test2
+total 4
+drwxr-xr-x. 2 root root 4096 Nov 13 08:00 ram
+[root@localhost tomcat]# ls -ltr /opt/test2/ram/
+total 0
+[root@localhost tomcat]# rm -rf /opt/test2
+[root@localhost tomcat]# ls -ltr /opt/
+total 12
+drwxr-xr-x. 2 root root 4096 May 17  2013 rh
+drwxr-xr-x. 4 root root 4096 Nov 13 07:57 tomcat
+drwxr-xr-x. 3 root root 4096 Nov 13 07:59 test
+[root@localhost tomcat]# rm -rf /opt/test
+[root@localhost tomcat]# ls -ltr /opt/
+total 8
+drwxr-xr-x. 2 root root 4096 May 17  2013 rh
+drwxr-xr-x. 4 root root 4096 Nov 13 07:57 tomcat
+[root@localhost tomcat]# mkdir ../test
+[root@localhost tomcat]# ls -ltr /opt/
+total 12
+drwxr-xr-x. 2 root root 4096 May 17  2013 rh
+drwxr-xr-x. 4 root root 4096 Nov 13 07:57 tomcat
+drwxr-xr-x. 2 root root 4096 Nov 13 08:02 test
+[root@localhost tomcat]#
+
+chown owner:group filename

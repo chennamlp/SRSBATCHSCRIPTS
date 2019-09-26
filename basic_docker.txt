@@ -1,0 +1,6 @@
+docker run  -itd <image>/tag:version 
+docker exec <containerid> bash
+docker stop <cid>
+docker start <cid>
+docker images
+docker ps
